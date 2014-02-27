@@ -98,16 +98,6 @@ module Raingrams
     end
 
     #
-    # Creates a new model object with the given _options_ and trains it
-    # with the inner text of the paragraphs tags at the specified _url_.
-    #
-    def self.train_with_url(url,options={})
-      self.build(options) do |model|
-        model.train_with_url(url)
-      end
-    end
-
-    #
     # Marshals a model from the contents of the file at the specified
     # _path_.
     #
