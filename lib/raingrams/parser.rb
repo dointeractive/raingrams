@@ -84,10 +84,10 @@ module Raingrams
 
       if @ignore_punctuation
         # split and ignore punctuation characters
-        return sentence.scan(/\w+[\-_\.:']\w+|\w+/)
+        return sentence.scan(/[[:alnum:]]+[\-_\.:'][[:alnum:]]+|[[:alnum:]]+/)
       else
         # split and accept punctuation characters
-        return sentence.scan(/[\w\-_,:;\.\?\!'"\\\/]+/)
+        return sentence.scan(/[[[:alnum:]]\-_,:;\.\?\!'"\\\/]+/)
       end
     end
 
